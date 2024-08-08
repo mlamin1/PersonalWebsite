@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-*@l#h*iu2d*@5c6sh7xaig$y^r65q8c4yd2k2bcx0+4(18k3@w
 DEBUG = True
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['mlaminsite-b0e7d14934fb.herokuapp.com', 'mlamincreates.com', 'localhost']
+ALLOWED_HOSTS = ['mlaminsite-b0e7d14934fb.herokuapp.com', 'mlamincreates.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -56,11 +56,30 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'personal_website.urls'
 
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
+
+
+# personal_website/settings.py
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True,  # This should be True
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -122,7 +141,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
