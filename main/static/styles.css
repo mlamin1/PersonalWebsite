@@ -56,39 +56,116 @@ nav {
     background-color: #333;
 }
 
+/* Section 1 */
+/* Section 1 */
+/* Section 1 */
+
 .hero-header {
+    display: flex; /* Switch to a flex layout for side-by-side alignment */
+    justify-content: space-between; /* Space between the content and the image */
+    align-items: center; /* Vertically align items */
+    padding: 50px;
     background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
 }
 
-.hero-header h1 {
+.hero-content {
+    max-width: 50%; /* Content takes up half of the space */
+}
+
+.hero-content h1 {
     font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image {
+    max-width: 45%; /* Image takes up slightly less than half the space */
+}
+
+.hero-image img {
+    width: 100%; /* Ensure the image scales to fit its container */
+    height: auto;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section 2 */
+/* Section 2 */
+/* Section 2 */
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.about-me-content {
+    max-width: 50%;
+}
+
+.about-me-content .subheading {
+    font-size: 1em;
+    color: #666;
+    text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.hero-header p {
-    font-size: 1.2em;
-    color: #666;
-}
-
-.about-me {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.about-me h2 {
+.about-me-content h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.about-me p {
-    font-size: 1.1em;
+.about-me-content p {
+    font-size: 1.2em;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
+
+.about-me-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.about-me-image {
+    max-width: 45%;
+}
+
+.about-me-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Section 3 */
+/* Section 3 */
+/* Section 3 */
 
 .projects {
     padding: 40px 20px;

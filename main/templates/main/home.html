@@ -24,17 +24,38 @@
         </div>
     </nav>
 
-    <!-- Hero Header Section -->
+    <!-- Side-by-Side Hero Section -->
     <section class="hero-header">
-        <h1>Welcome to My Personal Website</h1>
-        <p>Your brief introduction goes here. Share what you do and what this site is about.</p>
+        <div class="hero-content">
+            <h1>Passionate developer showcasing my work</h1>
+            <p>Welcome to my personal website! Here, you’ll find a collection of my projects and blog posts.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Explore</a>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/hero-placeholder.png' %}" alt="Hero Image">
+        </div>
     </section>
+
 
     <!-- About Me Section -->
     <section class="about-me">
-        <h2>About Me</h2>
-        <p>This is where you can provide some background information about yourself, your journey, skills, and what motivates you.</p>
+    <div class="about-me-content">
+        <span class="subheading">Innovative</span>
+        <h2>Showcasing My Best Work and Achievements</h2>
+        <p>Welcome to my personal website where I highlight my most significant projects and achievements as a developer. Explore my portfolio and learn more about my skills and experience.</p>
+        <div class="about-me-buttons">
+            <a href="#" class="btn">Explore</a>
+            <a href="#" class="btn-secondary">Contact</a>
+        </div>
+    </div>
+    <div class="about-me-image">
+        <img src="{% static 'images/about-me-placeholder.png' %}" alt="About Me Image">
+    </div>
     </section>
+    
 
     <!-- Projects Section -->
     <section class="projects">
