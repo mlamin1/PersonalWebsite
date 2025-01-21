@@ -1,0 +1,134 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <!-- Featured Project Section -->
+    <section class="featured-project">
+        <h2>Featured Project</h2>
+        {% if projects %}
+        {% with featured_project=projects.first %}
+        <div class="featured-project-content">
+            <img src="{{ featured_project.hero_image.url }}" alt="Featured Project Image">
+            <div class="featured-project-text">
+                <h3>{{ featured_project.title }}</h3>
+                <p>{{ featured_project.introduction|truncatewords:20 }}</p>
+                <a href="{% url 'project_detail' featured_project.id %}" class="btn">View Details</a>
+            </div>
+        </div>
+        {% endwith %}
+        {% else %}
+        <!-- Placeholder for Featured Project -->
+        <div class="featured-project-content">
+            <img src="{% static 'images/featured-project-placeholder.png' %}" alt="Featured Project Image">
+            <div class="featured-project-text">
+                <h3>Featured Project</h3>
+                <p>Introduction to the sample project.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+        </div>
+        {% endif %}
+    </section>
+
+    <!-- Projects Grid Layout -->
+    <section class="projects">
+        <h2>My Key Projects</h2>
+        <div class="projects-grid">
+            {% if projects %}
+                {% for project in projects|slice:":3" %}
+                <div class="project-card">
+                    <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.introduction|truncatewords:15 }}</p>
+                    <a href="{% url 'project_detail' project.id %}" class="btn">View Details</a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Placeholder Projects -->
+                {% for i in "123" %}
+                <div class="project-card">
+                    <img src="{% static 'images/project-placeholder.png' %}" alt="Project Image">
+                    <h3>Sample Project {{ i }}</h3>
+                    <p>Introduction to the sample project.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
+
+
+{% comment %} {% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+    <!-- Featured Project Section -->
+    <section class="featured-project">
+        <h2>Featured Project</h2>
+        {% if projects %}
+        {% with featured_project=projects.first %}
+        <div class="featured-project-content">
+            <img src="{{ featured_project.hero_image.url }}" alt="Featured Project Image">
+            <div class="featured-project-text">
+                <h3>{{ featured_project.title }}</h3>
+                <p>{{ featured_project.introduction|truncatewords:20 }}</p>
+                <a href="{% url 'project_detail' featured_project.id %}" class="btn">View Details</a>
+            </div>
+        </div>
+        {% endwith %}
+        {% else %}
+        <!-- Placeholder Content -->
+        <div class="featured-project-content">
+            <img src="{% static 'images/featured-project.png' %}" alt="Featured Project Image">
+            <div class="featured-project-text">
+                <h3>Sample Project</h3>
+                <p>Introduction to the sample project. Highlight key features, technologies used, and what makes this project stand out.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+        </div>
+        {% endif %}
+    </section>
+
+    <!-- Projects Grid Layout -->
+    <section class="projects">
+        <h2>My Key Projects</h2>
+        <div class="projects-grid">
+            {% if projects %}
+            {% for project in projects|slice:":3" %}
+            <div class="project-card">
+                <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.introduction|truncatewords:15 }}</p>
+                <a href="{% url 'project_detail' project.id %}" class="btn">View Details</a>
+            </div>
+            {% endfor %}
+            {% else %}
+            <!-- Placeholder Project 1 -->
+            <div class="project-card">
+                <img src="{% static 'images/project1.png' %}" alt="Project 1 Image">
+                <h3>Sample Project 1</h3>
+                <p>Introduction to the sample project 1. Highlight key features and technologies used.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+            <!-- Placeholder Project 2 -->
+            <div class="project-card">
+                <img src="{% static 'images/project2.png' %}" alt="Project 2 Image">
+                <h3>Sample Project 2</h3>
+                <p>Introduction to the sample project 2. Highlight key features and technologies used.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+            <!-- Placeholder Project 3 -->
+            <div class="project-card">
+                <img src="{% static 'images/project3.png' %}" alt="Project 3 Image">
+                <h3>Sample Project 3</h3>
+                <p>Introduction to the sample project 3. Highlight key features and technologies used.</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %} {% endcomment %}

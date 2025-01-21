@@ -1,4 +1,8 @@
-<!-- main/templates/main/home.html -->
+{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% comment %} <!-- main/templates/main/home.html -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,7 @@
             <a href="#">Logo</a>
         </div>
         <ul class="nav-links">
-            <li><a href="#">About Me</a></li>
+            <li><a href="{% url 'about_me' %}">About Me</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">More</a></li>
@@ -79,5 +83,114 @@
         </div>
     </section>
 
+    <!-- Blogs Section -->
+    <div class="blog-section">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <h3>Blog Post Title 1</h3>
+                <p>This is a brief excerpt from the first blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post Title 2</h3>
+                <p>This is a brief excerpt from the second blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post Title 3</h3>
+                <p>This is a brief excerpt from the third blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
 </body>
+</html> {% endcomment %}
+
+
+
+
+
+
+
+<!-- main/templates/main/home.html -->
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Side-by-Side Hero Section -->
+    <section class="hero-header">
+        <div class="hero-content">
+            <h1>Passionate developer showcasing my work</h1>
+            <p>Welcome to my personal website! Here, you’ll find a collection of my projects and blog posts.</p>
+            <div class="hero-buttons">
+                <a href="{% url 'about_me' %}" class="btn">Explore</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/hero-placeholder.png' %}" alt="Hero Image">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+        <div class="about-me-content">
+            <span class="subheading">Innovative</span>
+            <h2>Showcasing My Best Work and Achievements</h2>
+            <p>Welcome to my personal website where I highlight my most significant projects and achievements as a developer. Explore my portfolio and learn more about my skills and experience.</p>
+            <div class="about-me-buttons">
+                <a href="{% url 'about_me' %}" class="btn">Explore</a>
+                <a href="#" class="btn-secondary">Contact</a>
+            </div>
+        </div>
+        <div class="about-me-image">
+            <img src="{% static 'images/about-me-placeholder.png' %}" alt="About Me Image">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2 class="projects-heading">My Key Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="{% static 'images/project1-placeholder.png' %}" alt="Project 1 Image">
+                <h3>Project 1</h3>
+                <p>Brief description of the project goes here. Highlight key features and technologies used.</p>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'images/project2-placeholder.png' %}" alt="Project 2 Image">
+                <h3>Project 2</h3>
+                <p>Brief description of the project goes here. Highlight key features and technologies used.</p>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'images/project3-placeholder.png' %}" alt="Project 3 Image">
+                <h3>Project 3</h3>
+                <p>Brief description of the project goes here. Highlight key features and technologies used.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <div class="blog-section">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <h3>Blog Post Title 1</h3>
+                <p>This is a brief excerpt from the first blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post Title 2</h3>
+                <p>This is a brief excerpt from the second blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post Title 3</h3>
+                <p>This is a brief excerpt from the third blog post...</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 </html>

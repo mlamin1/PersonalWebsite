@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="project-hero">
+    <div class="project-hero-content">
+        <h1>{{ project.title }}</h1>
+        <h2>{{ project.subtitle }}</h2>
+    </div>
+    {% if project.hero_image %}
+    <div class="project-hero-image">
+        <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+    </div>
+    {% endif %}
+</section>
+
+<!-- Project Overview -->
+<section class="project-overview">
+    <div class="project-introduction">
+        <h2>Project Overview</h2>
+        <p>{{ project.introduction }}</p>
+    </div>
+    <div class="project-role">
+        <h3>My Role</h3>
+        <p>{{ project.role }}</p>
+    </div>
+</section>
+
+<!-- Details Section -->
+<section class="project-details">
+    <h2>Project Details</h2>
+    <div class="details-grid">
+        <div class="detail-item">
+            <h3>Project Goals</h3>
+            <p>{{ project.goals }}</p>
+        </div>
+        <div class="detail-item">
+            <h3>Technologies Used</h3>
+            <ul>
+                {% for tech in technologies %}
+                <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="detail-item">
+            <h3>Challenges & Solutions</h3>
+            <p>{{ project.challenges }}</p>
+            <p>{{ project.solutions }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Image Gallery/Media Section -->
+{% if project.gallery_images and project.gallery_images|length > 0 %}
+<section class="project-gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery-grid">
+        {% for image in project.gallery_images %}
+        <div class="gallery-item">
+            {% if image.url %}
+            <img src="{{ image.url }}" alt="Project Image">
+            {% endif %}
+            {% if image.caption %}
+            <p>{{ image.caption }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Key Features and Achievements -->
+{% if project.features and project.features|length > 0 %}
+<section class="project-features">
+    <h2>Key Features & Achievements</h2>
+    <div class="features-grid">
+        {% for feature in project.features %}
+        <div class="feature-item">
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Client/Stakeholder Testimonial -->
+{% if project.testimonial %}
+<section class="project-testimonial">
+    <h2>Client/Stakeholder Testimonial</h2>
+    <blockquote>
+        <p>{{ project.testimonial }}</p>
+    </blockquote>
+</section>
+{% endif %}
+
+<!-- Call to Action -->
+<section class="project-cta">
+    <div class="cta-buttons">
+        <a href="{% url 'projects' %}" class="btn">Explore More Projects</a>
+        <a href="{% url 'contact' %}" class="btn-secondary">Contact Me</a>
+    </div>
+</section>
+
+<!-- Downloadable Content (Optional) -->
+{% if project.download_link %}
+<section class="project-download">
+    <a href="{{ project.download_link.url }}" class="btn">Download Case Study</a>
+</section>
+{% endif %}
+
+{% endblock %}

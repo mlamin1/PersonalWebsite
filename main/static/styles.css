@@ -7,7 +7,51 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the navigation links */
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    position: absolute; /* Position the logo to the left */
+    left: 30px;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* nav {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #fff;
     padding: 15px 30px;
@@ -54,7 +98,7 @@ nav {
 
 .cta .signup-btn:hover {
     background-color: #333;
-}
+} */
 
 /* Section 1 */
 /* Section 1 */
@@ -83,9 +127,22 @@ nav {
     margin-bottom: 20px;
 }
 
-.hero-buttons {
+/* .hero-buttons {
     display: flex;
     gap: 20px;
+} */
+
+.hero-content {
+    max-width: 50%; 
+    text-align: center; /* Center the text and buttons */
+    margin: 0 auto; /* Center the content block */
+}
+
+.hero-buttons {
+    display: inline-flex; /* Keep buttons inline */
+    gap: 20px;
+    justify-content: center; /* Center buttons within the content */
+    margin-top: 20px;
 }
 
 .hero-image {
@@ -119,7 +176,7 @@ nav {
 /* Section 2 */
 
 /* About Me Section */
-.about-me {
+/* .about-me {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,7 +218,31 @@ nav {
 .about-me-image img {
     width: 100%;
     height: auto;
+} */
+
+.about-me {
+    display: flex;
+    justify-content: center; /* Center the content within the container */
+    align-items: center;
+    padding: 50px 100px; /* Increase padding for more space on the sides */
+    background-color: #fff;
 }
+
+.about-me-content {
+    max-width: 40%; /* Reduce width slightly for better spacing */
+    margin-right: 5%; /* Add margin to create space between the text and image */
+}
+
+.about-me-image {
+    max-width: 45%;
+}
+
+.about-me-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Keeps the image circular */
+}
+
 
 /* Section 3 */
 /* Section 3 */
@@ -210,3 +291,649 @@ nav {
     font-size: 1em;
     color: #666;
 }
+
+/* Section 4 */
+/* Section 4 */
+/* Section 4 */
+
+/* Blog Section on Home Page */
+.blog-section {
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for more vertical space */
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+.blog-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 60px; /* Increased bottom margin */
+}
+
+.blog-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 30px; /* Increased padding for more substantial content */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+    min-height: 250px; /* Ensures each blog post has a consistent height */
+}
+
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-post a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* About Me Section */
+/* About Me Section */
+/* About Me Section */
+/* About Me Section */
+
+.about-me-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-me-section img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.about-me-section h1, .about-me-section h2 {
+    color: #333;
+}
+
+.about-me {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-me-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-me-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-me-content {
+    max-width: 600px;
+}
+
+.about-me-content h2,
+.about-me-content h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.about-me-buttons .btn,
+.about-me-buttons .btn-secondary {
+    margin-top: 20px;
+}
+
+/* Projects Page Section */
+/* Projects Page Section */
+/* Projects Page Section */
+/* Projects Page Section */
+
+/* Featured Project Section */
+/* Featured Project Section */
+/* Featured Project Section */
+.featured-project {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.featured-project h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.featured-project-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-project-content img {
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+.featured-project-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.featured-project-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.featured-project-text p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.featured-project-text .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Projects Grid Layout */
+.projects {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* Adjust the width of each card */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* .project-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 30%; /* Adjust the flex basis to ensure three items per row */
+    max-width: 30%; /* Ensures each card takes up 30% of the row 
+} */
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.project-card .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 100%;
+        flex: 1 1 100%; /* Make sure each card takes up the full width on small screens */
+    }
+}
+
+/* Project Details Page */
+/* Project Details Page */
+/* Project Details Page */
+/* Project Details Page */
+
+/* Hero Section */
+
+.project-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.project-hero-content {
+    max-width: 50%;
+}
+
+.project-hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.project-hero-content h2 {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.project-hero-image {
+    max-width: 45%;
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Project Overview */
+.project-overview {
+    padding: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-introduction, .project-role {
+    max-width: 45%;
+}
+
+.project-introduction h2, .project-role h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-introduction p, .project-role p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Details Section */
+.project-details {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.detail-item {
+    max-width: 30%;
+}
+
+.detail-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.detail-item p, .detail-item ul {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Project Gallery */
+.project-gallery {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    max-width: 30%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Key Features and Achievements */
+.project-features {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-item {
+    max-width: 30%;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Testimonial Section */
+.project-testimonial {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.project-testimonial blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project-testimonial cite {
+    display: block;
+    font-size: 1em;
+    color: #000;
+    margin-top: 10px;
+}
+
+/* Call to Action */
+.project-cta {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.project-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Downloadable Content */
+.project-download {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.project-download .btn {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-hero {
+        flex-direction: column;
+    }
+
+    .project-overview, .details-grid, .gallery-grid, .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-overview > div, .details-grid > div, .gallery-item, .feature-item {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Blog Page Section */
+/* Blog Page Section */
+/* Blog Page Section */
+/* Blog Page Section */
+
+.featured-blog {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.featured-blog h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.featured-blog-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-blog-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.featured-blog-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.featured-blog-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.featured-blog-text p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.featured-blog-text .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Blog Grid */
+/* Blog Grid */
+/* Blog Grid */
+
+.blogs {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.blogs h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.blogs-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.blog-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* Blog Detail Section */
+/* Blog Detail Section */
+/* Blog Detail Section */
+/* Blog Detail Section */
+
+.blog-hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.blog-hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.blog-content {
+    padding: 50px;
+    background-color: #fff;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.author-bio {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.author-bio img {
+    border-radius: 50%;
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.author-bio p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.related-posts {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.related-posts-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.related-post {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.related-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.related-post a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+

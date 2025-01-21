@@ -1,0 +1,28 @@
+<!-- main/templates/main/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Personal Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="{% url 'home' %}">Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'about_me' %}">About Me</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'blog_list' %}">Blog</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    <!-- Content specific to each page will go here -->
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+<section class="blog-hero">
+    <h1>{{ blog.title }}</h1>
+    <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+</section>
+
+<section class="blog-content">
+    <p>{{ blog.content }}</p>
+</section>
+
+<section class="author-bio">
+    <img src="{{ blog.author.image.url }}" alt="{{ blog.author.name }}">
+    <p>{{ blog.author.bio }}</p>
+</section>
+
+<section class="related-posts">
+    <h2>Related Posts</h2>
+    <div class="related-posts-grid">
+        {% for related in blog.related_posts.all %}
+        <div class="related-post">
+            <h3>{{ related.title }}</h3>
+            <a href="{% url 'blog_detail' related.id %}">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
