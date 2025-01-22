@@ -5,18 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Personal Website{% endblock %}</title>
+    <title>M Lamin - Portfolio</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
     <nav>
         <div class="logo">
-            <a href="{% url 'home' %}">Logo</a>
+            <a href="{% url 'home' %}">ML</a>
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul class="nav-links">
-            <li><a href="{% url 'about_me' %}">About Me</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about_me' %}">About</a></li>
             <li><a href="{% url 'projects' %}">Projects</a></li>
-            <li><a href="{% url 'blog_list' %}">Blog</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'contact' %}" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
 
