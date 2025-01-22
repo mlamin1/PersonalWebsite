@@ -1039,15 +1039,8 @@ nav {
 }
 
 .placeholder-image.project {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
+    min-height: 250px;  /* Match home page image height */
+    background: linear-gradient(45deg, var(--secondary-color), var(--secondary-light));
 }
 
 .placeholder-image.blog {
@@ -1232,13 +1225,11 @@ nav {
 }
 
 .projects-container {
-    display: flex;  /* Change to flex from grid */
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;  /* Match home page gap */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .project-card {
@@ -1247,9 +1238,8 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    flex: 1 1 30%; /* Adjust the flex basis to ensure three items per row */
-    max-width: 30%; /* Ensures each card takes up 30% of the row */
-    min-height: 400px;  /* Match home page card height */
+    flex: 1;  /* Match home page flex */
+    min-height: 400px;
 }
 
 .project-image {
@@ -1265,15 +1255,13 @@ nav {
 }
 
 .project-content {
-    padding: 30px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
 }
 
 .project-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    font-size: 1.8em;  /* Match home page font size */
+    margin-bottom: 10px;
+    color: var(--text-primary);
 }
 
 .project-subtitle {
@@ -1283,9 +1271,8 @@ nav {
 
 .project-intro {
     font-size: 1.1em;
+    color: var(--text-secondary);
     line-height: 1.6;
-    flex-grow: 1;
-    margin-bottom: 25px;
 }
 
 .project-tech {
