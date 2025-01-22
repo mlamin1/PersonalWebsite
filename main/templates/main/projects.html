@@ -4,59 +4,45 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
-    <!-- Featured Project Section -->
-    <section class="featured-project">
-        <h2>Featured Project</h2>
-        {% if projects %}
-        {% with featured_project=projects.first %}
-        <div class="featured-project-content">
-            <img src="{{ featured_project.hero_image.url }}" alt="Featured Project Image">
-            <div class="featured-project-text">
-                <h3>{{ featured_project.title }}</h3>
-                <p>{{ featured_project.introduction|truncatewords:20 }}</p>
-                <a href="{% url 'project_detail' featured_project.id %}" class="btn">View Details</a>
-            </div>
-        </div>
-        {% endwith %}
-        {% else %}
-        <!-- Placeholder for Featured Project -->
-        <div class="featured-project-content">
-            <img src="{% static 'images/featured-project-placeholder.png' %}" alt="Featured Project Image">
-            <div class="featured-project-text">
-                <h3>Featured Project</h3>
-                <p>Introduction to the sample project.</p>
-                <a href="#" class="btn">View Details</a>
-            </div>
-        </div>
-        {% endif %}
-    </section>
+<section class="projects-header section">
+    <div class="container">
+        <h1>My Projects</h1>
+        <p class="lead">A collection of my recent work and projects</p>
+    </div>
+</section>
 
-    <!-- Projects Grid Layout -->
-    <section class="projects">
-        <h2>My Key Projects</h2>
-        <div class="projects-grid">
-            {% if projects %}
-                {% for project in projects|slice:":3" %}
-                <div class="project-card">
-                    <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+<section class="projects-grid section">
+    <div class="container">
+        <div class="projects-container">
+            {% for project in projects %}
+            <div class="project-card">
+                {% if project.hero_image %}
+                    <div class="project-image">
+                        <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+                    </div>
+                {% endif %}
+                <div class="project-content">
                     <h3>{{ project.title }}</h3>
-                    <p>{{ project.introduction|truncatewords:15 }}</p>
-                    <a href="{% url 'project_detail' project.id %}" class="btn">View Details</a>
+                    {% if project.subtitle %}
+                        <p class="project-subtitle">{{ project.subtitle }}</p>
+                    {% endif %}
+                    <p class="project-intro">{{ project.introduction|truncatewords:30 }}</p>
+                    
+                    {% if project.technologies %}
+                    <div class="project-tech">
+                        {% for tech in project.get_technologies_list %}
+                            <span class="tech-tag">{{ tech|strip }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    <a href="{% url 'project_detail' project.id %}" class="project-link">View Project</a>
                 </div>
-                {% endfor %}
-            {% else %}
-                <!-- Placeholder Projects -->
-                {% for i in "123" %}
-                <div class="project-card">
-                    <img src="{% static 'images/project-placeholder.png' %}" alt="Project Image">
-                    <h3>Sample Project {{ i }}</h3>
-                    <p>Introduction to the sample project.</p>
-                    <a href="#" class="btn">View Details</a>
-                </div>
-                {% endfor %}
-            {% endif %}
+            </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
 
 
