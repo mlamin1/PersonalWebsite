@@ -15,9 +15,6 @@ def projects(request):
     }
     return render(request, 'main/projects.html', context)
 
-def blog(request):
-    return render(request, 'main/blog.html')
-
 def project_detail(request, id):
     project = get_object_or_404(Project, id=id)
 
