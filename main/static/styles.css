@@ -1072,3 +1072,131 @@ nav {
     padding: 0 20px;
 }
 
+/* About Page Styles */
+.about-header {
+    background-color: var(--background-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-header h1 {
+    font-size: 2.5em;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.about-header .lead {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text h2 {
+    font-size: 1.8em;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    font-size: 1.4em;
+    color: var(--text-primary);
+    margin: 30px 0 15px;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.focus-areas {
+    list-style: none;
+    padding: 0;
+}
+
+.focus-areas li {
+    padding: 10px 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 25px;
+}
+
+.focus-areas li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.skills-section h2 {
+    font-size: 1.8em;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.skill-category {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skill-category h3 {
+    font-size: 1.2em;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-header {
+        padding: 40px 0;
+    }
+    
+    .about-content {
+        padding: 40px 0;
+    }
+    
+    .skill-category {
+        padding: 20px;
+    }
+}
+
