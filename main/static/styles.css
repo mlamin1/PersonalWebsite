@@ -1,4 +1,26 @@
 /* main/static/styles.css */
+:root {
+    /* Primary Colors */
+    --primary-color: #2A4365;      /* Deep Blue */
+    --primary-light: #4299E1;      /* Light Blue */
+    --primary-dark: #1A365D;       /* Darker Blue */
+    
+    /* Secondary Colors */
+    --secondary-color: #38B2AC;    /* Teal */
+    --secondary-light: #4FD1C5;    /* Light Teal */
+    
+    /* Neutral Colors */
+    --background-light: #F7FAFC;   /* Very Light Gray */
+    --background-dark: #EDF2F7;    /* Light Gray */
+    --text-primary: #2D3748;       /* Dark Gray */
+    --text-secondary: #4A5568;     /* Medium Gray */
+    
+    /* Accent Colors */
+    --accent-success: #48BB78;     /* Green */
+    --accent-warning: #ECC94B;     /* Yellow */
+    --accent-danger: #F56565;      /* Red */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -107,11 +129,11 @@ nav {
 }
 
 .section-light {
-    background-color: #fff;
+    background-color: var(--background-light);
 }
 
 .section-dark {
-    background-color: #f4f4f4;
+    background-color: var(--background-dark);
 }
 
 /* Add subtle separation between sections */
@@ -135,7 +157,7 @@ nav {
     justify-content: space-between; /* Space between the content and the image */
     align-items: center; /* Vertically align items */
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color: var(--background-light);
 }
 
 .hero-content {
@@ -163,20 +185,28 @@ nav {
 }
 
 .btn {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
 .btn-secondary {
-    background-color: #444;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-light);
 }
 
 /* Section 2 */
@@ -259,11 +289,12 @@ nav {
 }
 
 .expertise-item {
-    background: white;
+    background-color: white;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border: 1px solid var(--background-dark);
 }
 
 .expertise-item:hover {
@@ -271,13 +302,13 @@ nav {
 }
 
 .expertise-item h3 {
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 15px;
     font-size: 1.2em;
 }
 
 .expertise-item p {
-    color: #666;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
@@ -310,9 +341,9 @@ nav {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     flex: 1;
@@ -328,11 +359,12 @@ nav {
 .project-card h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: var(--text-primary);
 }
 
 .project-card p {
     font-size: 1em;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 .tech-stack {
@@ -343,11 +375,11 @@ nav {
 }
 
 .tech-stack span {
-    background-color: #f4f4f4;
+    background-color: var(--background-dark);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9em;
-    color: #666;
+    color: var(--text-secondary);
 }
 
 /* Section 4 */
@@ -375,7 +407,7 @@ nav {
 }
 
 .blog-post {
-    background-color: #fff;
+    background-color: white;
     padding: 30px; /* Increased padding for more substantial content */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -387,16 +419,17 @@ nav {
 .blog-post h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    color: var(--text-primary);
 }
 
 .blog-post p {
     font-size: 1em;
-    color: #666;
+    color: var(--text-secondary);
     margin-bottom: 15px;
 }
 
 .blog-post a {
-    color: #000;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -544,7 +577,7 @@ nav {
 }
 
 .project-card {
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -997,7 +1030,7 @@ nav {
 
 /* Placeholder Image Styles */
 .placeholder-image {
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1011,12 +1044,12 @@ nav {
 
 .placeholder-image.hero {
     min-height: 400px;
-    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(45deg, var(--primary-dark), var(--primary-light));
 }
 
 .placeholder-image.project {
     min-height: 250px;
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    background: linear-gradient(45deg, var(--secondary-color), var(--secondary-light));
 }
 
 .placeholder-image.blog {
