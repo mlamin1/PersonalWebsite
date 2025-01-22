@@ -1039,8 +1039,15 @@ nav {
 }
 
 .placeholder-image.project {
-    min-height: 250px;
-    background: linear-gradient(45deg, var(--secondary-color), var(--secondary-light));
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .placeholder-image.blog {
@@ -1225,8 +1232,9 @@ nav {
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;  /* Change to flex from grid */
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -1234,20 +1242,19 @@ nav {
 }
 
 .project-card {
-    background: white;
+    background-color: white;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    flex: 1 1 30%; /* Adjust the flex basis to ensure three items per row */
+    max-width: 30%; /* Ensures each card takes up 30% of the row */
+    min-height: 400px;  /* Match home page card height */
 }
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
 }
 
@@ -1258,40 +1265,37 @@ nav {
 }
 
 .project-content {
-    padding: 20px;
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
-    font-size: 1.4em;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-}
-
-.project-subtitle {
-    color: var(--text-secondary);
-    font-size: 0.9em;
+    font-size: 1.5em;
     margin-bottom: 15px;
 }
 
-.project-intro {
-    color: var(--text-secondary);
-    line-height: 1.6;
+.project-subtitle {
+    font-size: 1em;
     margin-bottom: 20px;
+}
+
+.project-intro {
+    font-size: 1.1em;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 25px;
 }
 
 .project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
+    margin: 25px 0;
 }
 
 .tech-tag {
-    background-color: var(--background-light);
-    color: var(--primary-color);
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.85em;
+    padding: 6px 14px;
+    font-size: 0.9em;
+    margin: 0 5px;
 }
 
 .project-link {
@@ -1301,25 +1305,21 @@ nav {
     padding: 8px 20px;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 15px;
-}
-
-.project-link:hover {
-    background-color: var(--primary-dark);
+    align-self: center;
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+    .project-card {
+        flex: 1 1 45%;  /* Two cards per row on medium screens */
+        max-width: 45%;
+    }
+}
+
 @media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .projects-header {
-        padding: 40px 0;
-    }
-    
-    .projects-grid {
-        padding: 40px 0;
+    .project-card {
+        flex: 1 1 100%;  /* One card per row on mobile */
+        max-width: 100%;
     }
 }
 
