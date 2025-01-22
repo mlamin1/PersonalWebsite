@@ -125,39 +125,43 @@
 {% block content %}
     <!-- Hero Section -->
     <section class="hero-header section">
-        <div class="hero-content">
-            <h1>Hi, I'm M Lamin</h1>
-            <p>I'm a Full Stack Developer passionate about creating impactful web solutions. I specialize in building modern, scalable applications that solve real-world problems.</p>
-            <div class="hero-buttons">
-                <a href="{% url 'projects' %}" class="btn">View My Work</a>
-                <a href="{% url 'contact' %}" class="btn-secondary">Let's Connect</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm M Lamin</h1>
+                <p>I'm a Full Stack Developer passionate about creating impactful web solutions. I specialize in building modern, scalable applications that solve real-world problems.</p>
+                <div class="hero-buttons">
+                    <a href="{% url 'projects' %}" class="btn">View My Work</a>
+                    <a href="{% url 'contact' %}" class="btn-secondary">Let's Connect</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="placeholder-image hero">
-                ML
+            <div class="hero-image">
+                <div class="placeholder-image hero">
+                    ML
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about-me section section-dark">
-        <div class="about-me-content">
-            <span class="subheading">Expertise</span>
-            <h2>Full Stack Development & Problem Solving</h2>
-            <p>Specializing in building scalable web applications with modern technologies. My focus areas include:</p>
-            <div class="expertise-grid">
-                <div class="expertise-item">
-                    <h3>Frontend Development</h3>
-                    <p>Creating responsive, user-friendly interfaces with React and modern CSS</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Backend Systems</h3>
-                    <p>Building robust APIs and server architectures with Django and Python</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Database Design</h3>
-                    <p>Optimizing data structures and queries for performance</p>
+        <div class="container">
+            <div class="about-me-content">
+                <span class="subheading">Expertise</span>
+                <h2>Full Stack Development & Problem Solving</h2>
+                <p>Specializing in building scalable web applications with modern technologies. My focus areas include:</p>
+                <div class="expertise-grid">
+                    <div class="expertise-item">
+                        <h3>Frontend Development</h3>
+                        <p>Creating responsive, user-friendly interfaces with React and modern CSS</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h3>Backend Systems</h3>
+                        <p>Building robust APIs and server architectures with Django and Python</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h3>Database Design</h3>
+                        <p>Optimizing data structures and queries for performance</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,68 +169,72 @@
 
     <!-- Projects Section -->
     <section class="projects section section-light">
-        <h2 class="projects-heading">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="placeholder-image project">
-                    P1
+        <div class="container">
+            <h2 class="projects-heading">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="placeholder-image project">
+                        P1
+                    </div>
+                    <h3>Personal Portfolio</h3>
+                    <p>A modern web application built with Django and React, featuring responsive design and dynamic content management.</p>
+                    <div class="tech-stack">
+                        <span>Django</span>
+                        <span>React</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
                 </div>
-                <h3>Personal Portfolio</h3>
-                <p>A modern web application built with Django and React, featuring responsive design and dynamic content management.</p>
-                <div class="tech-stack">
-                    <span>Django</span>
-                    <span>React</span>
-                    <span>PostgreSQL</span>
+                <div class="project-card">
+                    <div class="placeholder-image project">
+                        P2
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-featured online store with secure payment processing, inventory management, and user authentication.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Stripe</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
                 </div>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <div class="placeholder-image project">
-                    P2
+                <div class="project-card">
+                    <div class="placeholder-image project">
+                        P3
+                    </div>
+                    <h3>Task Management App</h3>
+                    <p>Collaborative project management tool with real-time updates and team collaboration features.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <a href="#" class="btn">View Project</a>
                 </div>
-                <h3>E-Commerce Platform</h3>
-                <p>Full-featured online store with secure payment processing, inventory management, and user authentication.</p>
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Django</span>
-                    <span>Stripe</span>
-                </div>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <div class="placeholder-image project">
-                    P3
-                </div>
-                <h3>Task Management App</h3>
-                <p>Collaborative project management tool with real-time updates and team collaboration features.</p>
-                <div class="tech-stack">
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                </div>
-                <a href="#" class="btn">View Project</a>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section class="blog-section section section-dark">
-        <h2>Latest Blog Posts</h2>
-        <div class="blog-grid">
-            <div class="blog-post">
-                <h3>Building Scalable Web Applications</h3>
-                <p>Exploring best practices for creating maintainable and scalable web applications using modern technologies...</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="blog-post">
-                <h3>Modern Frontend Development</h3>
-                <p>Deep dive into the latest frontend development trends and how to implement them effectively...</p>
-                <a href="#">Read More</a>
-            </div>
-            <div class="blog-post">
-                <h3>Django Best Practices</h3>
-                <p>Essential tips and tricks for building robust backend systems with Django and Python...</p>
-                <a href="#">Read More</a>
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <h3>Building Scalable Web Applications</h3>
+                    <p>Exploring best practices for creating maintainable and scalable web applications using modern technologies...</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Modern Frontend Development</h3>
+                    <p>Deep dive into the latest frontend development trends and how to implement them effectively...</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="blog-post">
+                    <h3>Django Best Practices</h3>
+                    <p>Essential tips and tricks for building robust backend systems with Django and Python...</p>
+                    <a href="#">Read More</a>
+                </div>
             </div>
         </div>
     </section>
