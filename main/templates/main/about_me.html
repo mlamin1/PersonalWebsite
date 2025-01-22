@@ -8,11 +8,17 @@
     <div class="about-me-grid">
         <!-- Personal Introduction with Image -->
         <div class="about-me-image">
-            <img src="{% static 'images/profile-placeholder.png' %}" alt="Your Name">
+            {% if profile_image %}
+                <img src="{{ profile_image.url }}" alt="M Lamin">
+            {% else %}
+                <div class="placeholder-image">
+                    ML
+                </div>
+            {% endif %}
         </div>
         <div class="about-me-content">
             <h2>Hi, I'm [Your Name]</h2>
-            <p>Welcome to my personal website! Here’s a little about me: I’m a [Your Job Title] with a passion for [Your Passion]. My journey began with [Brief Story about Your Career Journey], and I’m motivated by [What Motivates You].</p>
+            <p>Welcome to my personal website! Here's a little about me: I'm a [Your Job Title] with a passion for [Your Passion]. My journey began with [Brief Story about Your Career Journey], and I'm motivated by [What Motivates You].</p>
         </div>
     </div>
 </section>
@@ -32,7 +38,7 @@
         <!-- Professional Background -->
         <div class="about-me-content">
             <h3>Professional Background</h3>
-            <p>With a background in [Your Education and Qualifications], I’ve developed a deep understanding of [Your Field]. My professional journey has equipped me with [Key Skills or Experiences].</p>
+            <p>With a background in [Your Education and Qualifications], I've developed a deep understanding of [Your Field]. My professional journey has equipped me with [Key Skills or Experiences].</p>
         </div>
     </div>
 </section>
@@ -64,7 +70,7 @@
         <!-- Additional Content (Fun Facts, Values, etc.) -->
         <div class="about-me-content">
             <h3>More About Me</h3>
-            <p>Here are a few fun facts about me: [Fun Facts]. I’m also deeply committed to [Your Values and Mission].</p>
+            <p>Here are a few fun facts about me: [Fun Facts]. I'm also deeply committed to [Your Values and Mission].</p>
             <a href="#" class="btn-secondary">Learn More</a>
         </div>
     </div>

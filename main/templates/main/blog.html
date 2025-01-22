@@ -25,7 +25,9 @@
                 {% if featured_blog.image %}
                 <img src="{{ featured_blog.image.url }}" alt="Featured Blog Image">
                 {% else %}
-                <img src="{% static 'images/placeholder.png' %}" alt="Placeholder Image">
+                <div class="placeholder-image hero">
+                    ML
+                </div>
                 {% endif %}
             </div>
             <div class="featured-blog-text">
@@ -49,7 +51,9 @@
                 {% if blog.image %}
                 <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
                 {% else %}
-                <img src="{% static 'images/placeholder.png' %}" alt="Placeholder Image">
+                <div class="placeholder-image blog">
+                    ML
+                </div>
                 {% endif %}
                 <h3>{{ blog.title }}</h3>
                 <p>{{ blog.excerpt|truncatewords:15 }}</p>

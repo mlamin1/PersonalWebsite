@@ -10,11 +10,15 @@
         <h1>{{ project.title }}</h1>
         <h2>{{ project.subtitle }}</h2>
     </div>
-    {% if project.hero_image %}
     <div class="project-hero-image">
-        <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+        {% if project.hero_image %}
+            <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
+        {% else %}
+            <div class="placeholder-image hero">
+                ML
+            </div>
+        {% endif %}
     </div>
-    {% endif %}
 </section>
 
 <!-- Project Overview -->

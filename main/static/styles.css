@@ -937,3 +937,49 @@ nav {
     font-size: 1em;
 }
 
+/* Placeholder Image Styles */
+.placeholder-image {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    min-height: 200px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.placeholder-image.hero {
+    min-height: 400px;
+    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+.placeholder-image.project {
+    min-height: 250px;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+}
+
+.placeholder-image.blog {
+    min-height: 200px;
+    background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+.placeholder-image.profile {
+    min-height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #4b6cb7, #182848);
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .placeholder-image.hero {
+        min-height: 300px;
+    }
+    
+    .placeholder-image.project {
+        min-height: 200px;
+    }
+}
+

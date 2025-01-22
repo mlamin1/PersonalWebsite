@@ -31,15 +31,17 @@
     <!-- Side-by-Side Hero Section -->
     <section class="hero-header">
         <div class="hero-content">
-            <h1>Passionate developer showcasing my work</h1>
-            <p>Welcome to my personal website! Here, you’ll find a collection of my projects and blog posts.</p>
+            <h1>Hi, I'm M Lamin</h1>
+            <p>I'm a Full Stack Developer passionate about creating impactful web solutions.</p>
             <div class="hero-buttons">
-                <a href="#" class="btn">Explore</a>
-                <a href="#" class="btn-secondary">Learn More</a>
+                <a href="{% url 'about_me' %}" class="btn">View My Work</a>
+                <a href="{% url 'contact' %}" class="btn-secondary">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="{% static 'images/hero-placeholder.png' %}" alt="Hero Image">
+            <div class="placeholder-image hero">
+                ML
+            </div>
         </div>
     </section>
 
@@ -66,7 +68,9 @@
         <h2 class="projects-heading">My Key Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="{% static 'images/project1-placeholder.png' %}" alt="Project 1 Image">
+                <div class="placeholder-image project">
+                    P1
+                </div>
                 <h3>Project 1</h3>
                 <p>Brief description of the project goes here. Highlight key features and technologies used.</p>
             </div>
@@ -122,14 +126,17 @@
     <!-- Side-by-Side Hero Section -->
     <section class="hero-header">
         <div class="hero-content">
-            <h1>Passionate developer showcasing my work</h1>
-            <p>Welcome to my personal website! Here, you’ll find a collection of my projects and blog posts.</p>
+            <h1>Hi, I'm M Lamin</h1>
+            <p>I'm a Full Stack Developer passionate about creating impactful web solutions.</p>
             <div class="hero-buttons">
-                <a href="{% url 'about_me' %}" class="btn">Explore</a>
+                <a href="{% url 'about_me' %}" class="btn">View My Work</a>
+                <a href="{% url 'contact' %}" class="btn-secondary">Contact Me</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="{% static 'images/hero-placeholder.png' %}" alt="Hero Image">
+            <div class="placeholder-image hero">
+                ML
+            </div>
         </div>
     </section>
 
@@ -140,7 +147,7 @@
             <h2>Showcasing My Best Work and Achievements</h2>
             <p>Welcome to my personal website where I highlight my most significant projects and achievements as a developer. Explore my portfolio and learn more about my skills and experience.</p>
             <div class="about-me-buttons">
-                <a href="{% url 'about_me' %}" class="btn">Explore</a>
+                <a href="#" class="btn">Explore</a>
                 <a href="#" class="btn-secondary">Contact</a>
             </div>
         </div>
@@ -154,7 +161,9 @@
         <h2 class="projects-heading">My Key Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="{% static 'images/project1-placeholder.png' %}" alt="Project 1 Image">
+                <div class="placeholder-image project">
+                    P1
+                </div>
                 <h3>Project 1</h3>
                 <p>Brief description of the project goes here. Highlight key features and technologies used.</p>
             </div>
