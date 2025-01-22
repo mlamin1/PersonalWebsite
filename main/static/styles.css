@@ -307,7 +307,6 @@ nav {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     border: 1px solid var(--background-dark);
-    min-height: 200px;  /* Minimum height */
 }
 
 .expertise-item:hover {
@@ -427,33 +426,43 @@ nav {
 .blog-grid {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .blog-post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
     flex: 1;
-    max-width: none;  /* Remove max-width constraint */
+    min-height: 400px;  /* Match project card height */
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .blog-post h3 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
     color: var(--text-primary);
 }
 
 .blog-post p {
     font-size: 1.1em;
     color: var(--text-secondary);
-    margin-bottom: 15px;
     line-height: 1.6;
 }
 
-.blog-post a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
+.blog-post .tech-stack {
+    margin: 15px 0;
 }
-
 
 /* About Me Section */
 /* About Me Section */
