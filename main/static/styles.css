@@ -335,6 +335,21 @@ nav {
     color: #666;
 }
 
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.tech-stack span {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
 /* Section 4 */
 /* Section 4 */
 /* Section 4 */
