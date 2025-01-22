@@ -14,86 +14,57 @@
 <section class="projects-grid section">
     <div class="container">
         <div class="projects-container">
-            {% if projects %}
-                {% for project in projects %}
-                <div class="project-card">
-                    {% if project.hero_image %}
-                        <div class="project-image">
-                            <img src="{{ project.hero_image.url }}" alt="{{ project.title }}">
-                        </div>
-                    {% endif %}
-                    <div class="project-content">
-                        <h3>{{ project.title }}</h3>
-                        {% if project.subtitle %}
-                            <p class="project-subtitle">{{ project.subtitle }}</p>
-                        {% endif %}
-                        <p class="project-intro">{{ project.introduction|truncatewords:30 }}</p>
-                        
-                        {% if project.technologies %}
-                        <div class="project-tech">
-                            {% for tech in project.technologies.split %}
-                                <span class="tech-tag">{{ tech|strip }}</span>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                        
-                        <a href="{% url 'project_detail' project.id %}" class="project-link">View Project</a>
-                    </div>
+            <!-- Always show placeholder projects for now -->
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image project">ML</div>
                 </div>
-                {% endfor %}
-            {% else %}
-                <!-- Placeholder Projects -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image project">Project 1</div>
+                <div class="project-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="project-subtitle">Full Stack Web Development</p>
+                    <p class="project-intro">A modern portfolio website built with Django and modern web technologies.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">HTML/CSS</span>
                     </div>
-                    <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p class="project-subtitle">Full Stack Web Development</p>
-                        <p class="project-intro">A modern portfolio website built with Django and modern web technologies.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                        </div>
-                        <a href="#" class="project-link">Coming Soon</a>
-                    </div>
+                    <a href="#" class="project-link">Coming Soon</a>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image project">Project 2</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p class="project-subtitle">Web Application</p>
-                        <p class="project-intro">A full-featured e-commerce platform with secure payment integration.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <a href="#" class="project-link">Coming Soon</a>
-                    </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image project">ML</div>
                 </div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p class="project-subtitle">Web Application</p>
+                    <p class="project-intro">A full-featured e-commerce platform with secure payment integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link">Coming Soon</a>
+                </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image project">Project 3</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p class="project-subtitle">Mobile Application</p>
-                        <p class="project-intro">A productivity app for managing tasks and collaborating with teams.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Dart</span>
-                        </div>
-                        <a href="#" class="project-link">Coming Soon</a>
-                    </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-image project">ML</div>
                 </div>
-            {% endif %}
+                <div class="project-content">
+                    <h3>Task Management App</h3>
+                    <p class="project-subtitle">Mobile Application</p>
+                    <p class="project-intro">A productivity app for managing tasks and collaborating with teams.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Dart</span>
+                    </div>
+                    <a href="#" class="project-link">Coming Soon</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
