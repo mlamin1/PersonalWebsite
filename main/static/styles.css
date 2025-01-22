@@ -153,24 +153,6 @@ nav {
     margin-bottom: 20px;
 }
 
-/* .hero-buttons {
-    display: flex;
-    gap: 20px;
-} */
-
-.hero-content {
-    max-width: 50%; 
-    text-align: center; /* Center the text and buttons */
-    margin: 0 auto; /* Center the content block */
-}
-
-.hero-buttons {
-    display: inline-flex; /* Keep buttons inline */
-    gap: 20px;
-    justify-content: center; /* Center buttons within the content */
-    margin-top: 20px;
-}
-
 .hero-image {
     max-width: 45%; /* Image takes up slightly less than half the space */
 }
