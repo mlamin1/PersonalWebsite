@@ -158,8 +158,19 @@ nav {
     margin: 0 auto;     /* Center the content */
 }
 
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 .hero-content {
-    max-width: 50%; /* Content takes up half of the space */
+    flex: 1;  /* Take up available space */
+}
+
+.hero-image {
+    flex: 1;  /* Take up available space */
 }
 
 .hero-content h1 {
@@ -171,10 +182,6 @@ nav {
     font-size: 1.4em;   /* Larger text */
     line-height: 1.5;
     max-width: 600px;   /* Constrain text width */
-}
-
-.hero-image {
-    max-width: 45%; /* Image takes up slightly less than half the space */
 }
 
 .hero-image img {
@@ -266,9 +273,14 @@ nav {
     background-color: #fff;
 }
 
+.about-me-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .about-me-content {
-    max-width: 40%; /* Reduce width slightly for better spacing */
-    margin-right: 5%; /* Add margin to create space between the text and image */
+    flex: 1;
 }
 
 .about-me-image {
@@ -282,9 +294,10 @@ nav {
 }
 
 .expertise-grid {
-    max-width: 1200px;
-    margin: 20px auto;
-    gap: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .expertise-item {
@@ -314,8 +327,15 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .hero-container,
+    .about-me-grid,
+    .blog-grid {
+        flex-direction: column;
+    }
+    
+    .hero-image,
     .expertise-grid {
-        grid-template-columns: 1fr;
+        width: 100%;
     }
 }
 
@@ -406,21 +426,13 @@ nav {
 
 .blog-grid {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 .blog-post {
-    background-color: white;
-    padding: 35px;
-    min-height: 300px;
-    max-width: 350px;   /* Wider cards */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    flex: 1;
+    max-width: none;  /* Remove max-width constraint */
 }
 
 .blog-post h3 {
@@ -468,21 +480,6 @@ nav {
     padding: 50px 0;
     background-color: #f4f4f4;
     text-align: center;
-}
-
-.about-me-grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.about-me-image img {
-    max-width: 100%;
-    border-radius: 50%;
 }
 
 .about-me-content {

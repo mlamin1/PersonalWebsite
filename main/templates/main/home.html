@@ -125,7 +125,7 @@
 {% block content %}
     <!-- Hero Section -->
     <section class="hero-header section">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <h1>Hi, I'm M Lamin</h1>
                 <p>I'm a Full Stack Developer passionate about creating impactful web solutions. I specialize in building modern, scalable applications that solve real-world problems.</p>
@@ -145,10 +145,12 @@
     <!-- About Section -->
     <section class="about-me section section-dark">
         <div class="container">
-            <div class="about-me-content">
-                <span class="subheading">Expertise</span>
-                <h2>Full Stack Development & Problem Solving</h2>
-                <p>Specializing in building scalable web applications with modern technologies. My focus areas include:</p>
+            <div class="about-me-grid">
+                <div class="about-me-content">
+                    <span class="subheading">Expertise</span>
+                    <h2>Full Stack Development & Problem Solving</h2>
+                    <p>Specializing in building scalable web applications with modern technologies.</p>
+                </div>
                 <div class="expertise-grid">
                     <div class="expertise-item">
                         <h3>Frontend Development</h3>
@@ -157,10 +159,6 @@
                     <div class="expertise-item">
                         <h3>Backend Systems</h3>
                         <p>Building robust APIs and server architectures with Django and Python</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h3>Database Design</h3>
-                        <p>Optimizing data structures and queries for performance</p>
                     </div>
                 </div>
             </div>
