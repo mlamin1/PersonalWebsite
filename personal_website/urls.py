@@ -26,10 +26,8 @@ urlpatterns = [
     path('', views.home, name='home'),  # Home page route
     path('about/', views.about_me, name='about_me'),  # New route
     path('projects/', views.projects, name='projects'),
-    path('blog/', views.blog_list, name='blog_list'),  # Removed the duplicate blog route
     path('contact/', views.contact, name='contact'),
     path('projects/<int:id>/', views.project_detail, name='project_detail'),  # Project detail page
-    path('blog/<int:id>/', views.blog_detail, name='blog_detail'),
 ]
 
 if settings.DEBUG:

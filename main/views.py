@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from .models import Project, Blog
+from .models import Project
 
 # Create your views here.
 def home(request):
@@ -31,12 +31,3 @@ def project_detail(request, id):
 
 def contact(request):
     return render(request, 'main/contact.html')
-
-def blog_list(request):
-    blogs = Blog.objects.all()
-    return render(request, 'main/blog.html', {'blogs': blogs})
-
-def blog_detail(request, id):
-    blog = get_object_or_404(Blog, id=id)
-    related_posts = blog.related_posts.all()
-    return render(request, 'main/blog_detail.html', {'blog': blog, 'related_posts': related_posts})
