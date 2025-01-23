@@ -155,7 +155,7 @@ nav {
     margin-bottom: 15px;
 }
 
-.hero-content p {
+.hero-content h2 {
     font-size: 1.4em;   /* Larger text */
     line-height: 1.5;
     max-width: 600px;   /* Constrain text width */
@@ -1308,5 +1308,20 @@ nav {
         flex: 1 1 100%;  /* One card per row on mobile */
         max-width: 100%;
     }
+}
+
+.tagline {
+    color: var(--secondary-color);
+    font-size: 1.4em;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    max-width: 600px;
 }
 
