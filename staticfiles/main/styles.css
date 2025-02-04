@@ -1541,17 +1541,32 @@ nav {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
+    display: inline-block;
+    min-width: 0;
+    max-width: 100%;
+    animation: typing 4s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 650px }  /* Set a fixed width that accommodates the full text */
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--primary-color) }
+}
+
+/* Add responsive handling for the tagline */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 1.2em;
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
 }
 
 .hero-content p {
