@@ -137,17 +137,24 @@ nav {
 
 .hero-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;  /* Changed from center to prevent vertical centering issues */
     justify-content: space-between;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;  /* Added more vertical padding */
 }
 
 .hero-content {
-    flex: 1;  /* Take up available space */
+    flex: 0 1 60%;  /* Changed flex to prevent content from growing too much */
+    padding-right: 20px;  /* Added padding to keep content away from image */
 }
 
 .hero-image {
-    flex: 1;  /* Take up available space */
+    flex: 0 1 40%;  /* Changed flex to prevent image from growing too much */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-content h1 {
@@ -166,43 +173,26 @@ nav {
     height: auto;
 }
 
-.btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 30px;  /* Larger buttons */
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em;
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn, .btn-outline, .btn-secondary {
+    padding: 12px 25px;
+    text-align: center;
+    min-width: fit-content;
+    white-space: nowrap;
 }
 
 .btn:hover {
     background-color: var(--primary-dark);
 }
 
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 12px 30px;  /* Larger buttons */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-}
-
 .btn-secondary:hover {
     background-color: var(--secondary-light);
-}
-
-.btn-outline {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background: transparent;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
@@ -594,16 +584,6 @@ nav {
     box-sizing: border-box;
     margin-bottom: 20px;
 }
-
-/* .project-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    flex: 1 1 30%; /* Adjust the flex basis to ensure three items per row */
-    max-width: 30%; /* Ensures each card takes up 30% of the row 
-} */
 
 .project-card img {
     max-width: 100%;
@@ -1356,5 +1336,34 @@ nav {
     border-radius: 20px;
     font-size: 0.9em;
     font-weight: 500;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        flex: 1;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    
+    .hero-image {
+        flex: 1;
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
