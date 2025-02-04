@@ -2369,6 +2369,11 @@ body {
     transition: all 0.3s ease;
     text-decoration: none;
     color: var(--text-primary);
+    width: 100%;
+}
+
+.social-connections .social-link span {
+    flex: 1;
 }
 
 .social-connections .social-link:hover {
@@ -2379,6 +2384,8 @@ body {
 
 .social-connections .social-link i {
     font-size: 1.2em;
+    width: 24px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
