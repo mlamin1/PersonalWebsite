@@ -7,62 +7,163 @@
 <section class="projects-header section">
     <div class="container">
         <h1>My Projects</h1>
-        <p class="lead">A collection of my recent work and projects</p>
+        <p class="lead">Beginning my journey in web development</p>
     </div>
 </section>
 
 <section class="projects-grid section">
     <div class="container">
-        <div class="projects-container">
-            <!-- Always show placeholder projects for now -->
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-image project">ML</div>
-                </div>
-                <div class="project-content">
+        <!-- Current Project -->
+        <div class="featured-project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <span class="featured-badge">First Project</span>
                     <h3>Personal Portfolio Website</h3>
                     <p class="project-subtitle">Full Stack Web Development</p>
-                    <p class="project-intro">A modern portfolio website built with Django and modern web technologies.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">HTML/CSS</span>
+                    <div class="project-timeline">
+                        <div class="timeline-item">
+                            <span class="date">January 2024</span>
+                            <span class="event">Project Started</span>
+                        </div>
+                        <div class="timeline-item current">
+                            <span class="date">February 2024</span>
+                            <span class="event">Initial Release</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">Ongoing</span>
+                            <span class="event">Continuous Learning</span>
+                        </div>
                     </div>
-                    <a href="#" class="project-link">Coming Soon</a>
+                </div>
+                
+                <div class="project-grid">
+                    <div class="project-description">
+                        <p>My first venture into full-stack web development. This portfolio website represents my initial step into the world of web development, where I've applied various technologies and best practices to create a professional online presence.</p>
+                        
+                        <h4>What I've Learned</h4>
+                        <ul class="project-achievements">
+                            <li>Building responsive layouts using modern CSS techniques</li>
+                            <li>Implementing server-side functionality with Django</li>
+                            <li>Working with databases and form handling</li>
+                            <li>Deploying a live website on Heroku</li>
+                            <li>Version control with Git and GitHub</li>
+                        </ul>
+
+                        <h4>Technical Stack</h4>
+                        <div class="tech-stack">
+                            <span data-tooltip="Backend Framework">Django</span>
+                            <span data-tooltip="Programming Language">Python</span>
+                            <span data-tooltip="Frontend Structure">HTML5</span>
+                            <span data-tooltip="Styling">CSS3</span>
+                            <span data-tooltip="Interactivity">JavaScript</span>
+                            <span data-tooltip="Deployment Platform">Heroku</span>
+                        </div>
+
+                        <h4>Development Journey</h4>
+                        <div class="challenges-section">
+                            <div class="challenge-item">
+                                <h5>Learning Experience</h5>
+                                <p>Started with basic HTML/CSS and progressively added more complex features as I learned new concepts.</p>
+                            </div>
+                            <div class="challenge-item">
+                                <h5>Problem Solving</h5>
+                                <p>Overcame challenges in responsive design, email integration, and deployment configuration.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/personal-website" class="btn-outline" target="_blank">
+                                <i class="fab fa-github github-icon"></i>View Source
+                            </a>
+                            <a href="/" class="btn-primary">
+                                <i class="fas fa-external-link-alt demo-icon"></i>Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <div class="device-mockup">
+                            <div class="device-screen">
+                                <img src="{% static 'main/images/portfolio-preview.png' %}" alt="Portfolio Preview" class="preview-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Projects Section -->
+        <div class="section-header" style="margin-top: 60px;">
+            <span class="subheading">What's Next</span>
+            <h2>Learning Path</h2>
+            <p class="section-description">As I continue my journey in web development, here's what I'm planning to learn and build next.</p>
+        </div>
+
+        <div class="learning-path-grid">
+            <div class="learning-stage">
+                <div class="stage-header">
+                    <i class="fas fa-code stage-icon"></i>
+                    <h3>Next Project</h3>
+                </div>
+                <div class="stage-content">
+                    <p>Planning to build a task management system using AWS services to learn cloud computing and advanced web development concepts.</p>
+                    <div class="learning-goals">
+                        <h4>Learning Goals:</h4>
+                        <ul>
+                            <li>Cloud Architecture</li>
+                            <li>AWS Services</li>
+                            <li>API Development</li>
+                            <li>Advanced Django</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-image project">ML</div>
+            <div class="learning-stage">
+                <div class="stage-header">
+                    <i class="fas fa-graduation-cap stage-icon"></i>
+                    <h3>Skills to Master</h3>
                 </div>
-                <div class="project-content">
-                    <h3>E-Commerce Platform</h3>
-                    <p class="project-subtitle">Web Application</p>
-                    <p class="project-intro">A full-featured e-commerce platform with secure payment integration.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
+                <div class="stage-content">
+                    <div class="skills-to-learn">
+                        <div class="skill-category">
+                            <h4>Frontend Development</h4>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Redux</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend Development</h4>
+                            <div class="tech-stack">
+                                <span>RESTful APIs</span>
+                                <span>Database Design</span>
+                                <span>Authentication</span>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="project-link">Coming Soon</a>
                 </div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-image project">ML</div>
+        <!-- Learning Resources Section -->
+        <div class="resources-section">
+            <h3>Resources I'm Using</h3>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <i class="fas fa-book resource-icon"></i>
+                    <h4>Documentation</h4>
+                    <p>Official Django, React, and AWS documentation</p>
                 </div>
-                <div class="project-content">
-                    <h3>Task Management App</h3>
-                    <p class="project-subtitle">Mobile Application</p>
-                    <p class="project-intro">A productivity app for managing tasks and collaborating with teams.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Dart</span>
-                    </div>
-                    <a href="#" class="project-link">Coming Soon</a>
+                <div class="resource-item">
+                    <i class="fas fa-video resource-icon"></i>
+                    <h4>Online Courses</h4>
+                    <p>Udemy, freeCodeCamp, and YouTube tutorials</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-users resource-icon"></i>
+                    <h4>Community</h4>
+                    <p>Stack Overflow, GitHub, and Dev.to</p>
                 </div>
             </div>
         </div>
