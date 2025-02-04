@@ -27,6 +27,7 @@ urlpatterns = [
     path('about/', views.about_me, name='about_me'),  # New route
     path('projects/', views.projects, name='projects'),
     path('contact/', views.contact, name='contact'),
+    path('contact/submit/', views.contact, name='contact_submit'),  # Contact form submission
     path('projects/<int:id>/', views.project_detail, name='project_detail'),  # Project detail page
 ]
 
