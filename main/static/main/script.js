@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             try {
                 const formData = new FormData(contactForm);
-                const response = await fetch(contactForm.action || '/contact/', {
+                const response = await fetch(contactForm.action || '/contact/submit/', {
                     method: 'POST',
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
