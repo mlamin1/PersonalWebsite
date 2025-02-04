@@ -2,15 +2,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Back to Top Button
     const backToTopButton = document.getElementById('back-to-top');
-    if (backToTopButton) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
+    
+    function handleScroll() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    }
 
+    if (backToTopButton) {
+        // Initial check for scroll position
+        handleScroll();
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Scroll to top when clicked
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,

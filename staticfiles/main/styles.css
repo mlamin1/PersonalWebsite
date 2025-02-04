@@ -2061,6 +2061,7 @@ nav {
     justify-content: center;
 }
 
+/* Add explicit visible class styles */
 .back-to-top.visible {
     opacity: 1;
     visibility: visible;
@@ -2069,10 +2070,12 @@ nav {
 .back-to-top:hover {
     background-color: var(--primary-dark);
     transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .arrow-up {
     font-size: 1.5em;
+    line-height: 1;
 }
 
 /* Dark Mode Toggle */
