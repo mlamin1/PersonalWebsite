@@ -155,7 +155,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]  # Point to the static directory
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static/main')]  # Updated to point to the main subdirectory
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add these settings after the STATIC_ROOT configuration
