@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import ensure_csrf_cookie
 from .models import Project
 from .forms import ContactForm
 import json
@@ -33,6 +34,7 @@ def project_detail(request, id):
     return render(request, 'main/project_detail.html', context)
 
 @require_http_methods(["GET", "POST"])
+@ensure_csrf_cookie
 def contact(request):
     if request.method == 'POST' and request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         try:
