@@ -1,3 +1,23 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 60%;  /* Limit content width */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 40%;  /* Limit image width */
+}
+
 .hero-buttons {
     display: flex;
     gap: 15px;
