@@ -1908,27 +1908,52 @@ nav {
 /* Social Links */
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-top: 30px;
 }
 
 .social-link {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background-color: var(--background-light);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
-    font-size: 1.2em;
+    font-size: 1.4em;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-link:hover {
     background-color: var(--primary-color);
     color: white;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode adjustments for social links */
+[data-theme="dark"] .social-link {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
 }
 
 /* Scroll Indicator */
