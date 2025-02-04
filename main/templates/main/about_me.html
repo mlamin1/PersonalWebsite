@@ -7,7 +7,7 @@
 <section class="about-header section">
     <div class="container">
         <h1>About Me</h1>
-        <p class="lead">A passionate Full Stack Developer with a focus on creating elegant solutions</p>
+        <p class="lead">Full Stack Developer | ServiceNow Developer | AWS Certified</p>
     </div>
 </section>
 
@@ -17,52 +17,104 @@
             <!-- Professional Summary -->
             <div class="about-text">
                 <h2>Professional Summary</h2>
-                <p>I am a Full Stack Developer with expertise in building scalable web applications. My approach combines technical excellence with creative problem-solving to deliver impactful solutions.</p>
+                <p>I am a certified ServiceNow Developer and Full Stack Developer with a Secret Clearance, specializing in enterprise solutions and web applications. With a strong foundation in computer science and mathematics, I combine technical excellence with creative problem-solving to deliver impactful solutions.</p>
                 
-                <h3>My Focus Areas</h3>
+                <h3>Current Role</h3>
+                <p>As a ServiceNow Developer at Booz Allen Hamilton, I design and implement comprehensive HRSD solutions, focusing on process automation and system integration. I actively participate in agile development practices and collaborate with stakeholders to deliver high-quality solutions.</p>
+
+                <h3>Education</h3>
+                <p>Bachelor of Science in Computer Science from Salisbury University
+                <br>Minor: Mathematics</p>
+                
+                <h3>Certifications</h3>
                 <ul class="focus-areas">
-                    <li>Web Application Development</li>
-                    <li>Database Design & Optimization</li>
-                    <li>API Development</li>
-                    <li>User Interface Design</li>
+                    <li>ServiceNow Certified System Administrator (May 2023)</li>
+                    <li>AWS Solution Architect Associate</li>
+                    <li>CompTIA Security+</li>
+                    <li>Active Secret Clearance (DOD)</li>
                 </ul>
+
+                <h3>Military Service</h3>
+                <p>United States Army National Guard - Motor Transport Operator</p>
             </div>
             
             <!-- Technical Skills -->
             <div class="skills-section">
-                <h2>Technical Skills</h2>
+                <h2>Technical Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Frontend Development</h3>
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>C/C++</span>
+                            <span>C#</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Web Technologies</h3>
                         <div class="skill-tags">
                             <span>HTML5</span>
                             <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>React</span>
-                            <span>Responsive Design</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Backend Development</h3>
-                        <div class="skill-tags">
-                            <span>Python</span>
                             <span>Django</span>
-                            <span>RESTful APIs</span>
-                            <span>PostgreSQL</span>
+                            <span>JSP</span>
+                            <span>React</span>
                         </div>
                     </div>
                     
                     <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
+                        <h3>ServiceNow Development</h3>
                         <div class="skill-tags">
-                            <span>Git</span>
-                            <span>Docker</span>
+                            <span>Workflows</span>
+                            <span>Flow Designer</span>
+                            <span>Business Rules</span>
+                            <span>UI Policies</span>
+                            <span>Client Scripts</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Infrastructure & Tools</h3>
+                        <div class="skill-tags">
                             <span>AWS</span>
-                            <span>Heroku</span>
+                            <span>Linux</span>
+                            <span>Docker</span>
+                            <span>VMware</span>
+                            <span>Active Directory</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="cta-buttons" style="margin-top: 30px; text-align: center;">
+                    <a href="{% static 'main/files/Muniru Lamin-Resume-v5.pdf' %}" class="btn-primary" target="_blank">Download Resume</a>
+                    <a href="{% url 'contact' %}" class="btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Overview Section -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="subheading">Recent Work</span>
+            <h2>Notable Projects</h2>
+        </div>
+        <div class="projects-highlight">
+            <div class="highlight-item">
+                <h3>HRSD New Hire Onboarding Solution</h3>
+                <p>Designed and configured a comprehensive onboarding solution within ServiceNow, integrating with external systems like Adobe Digital Signature and implementing custom workflows for process automation.</p>
+            </div>
+            <div class="highlight-item">
+                <h3>Enterprise System Migration</h3>
+                <p>Successfully migrated 180 users from AMED Domain to MHS Domain, managing data transfer and application compatibility while maintaining DOD compliance.</p>
+            </div>
+            <div class="highlight-item">
+                <h3>Personal & Small Business Websites</h3>
+                <p>Developed event management platforms using Django, integrating Python, HTML, CSS, and JavaScript with SQL databases for efficient data management.</p>
             </div>
         </div>
     </div>
