@@ -173,10 +173,10 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST = 'smtp.mail.yahoo.com'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = 'munirulamin1996@gmail.com'
+    EMAIL_HOST_USER = 'laminmuniru@yahoo.com'
     EMAIL_HOST_PASSWORD = ''  # Set this in Heroku config vars
-    DEFAULT_FROM_EMAIL = 'munirulamin1996@gmail.com'
-    CONTACT_EMAIL = 'munirulamin1996@gmail.com'
+    DEFAULT_FROM_EMAIL = 'laminmuniru@yahoo.com'
+    CONTACT_EMAIL = 'laminmuniru@yahoo.com'
