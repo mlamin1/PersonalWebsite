@@ -111,4 +111,51 @@ document.addEventListener('DOMContentLoaded', function() {
     progressBars.forEach(bar => {
         observer.observe(bar);
     });
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get the form message div
+            const formMessage = contactForm.querySelector('.form-message');
+            formMessage.textContent = 'Sending message...';
+            formMessage.className = 'form-message';
+            
+            try {
+                const formData = new FormData(contactForm);
+                const searchParams = new URLSearchParams();
+                
+                for (const [key, value] of formData) {
+                    searchParams.append(key, value);
+                }
+                
+                const response = await fetch('/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    },
+                    body: searchParams.toString()
+                });
+                
+                const data = await response.json();
+                console.log('Response:', data);  // Debug log
+                
+                if (data.status === 'success') {
+                    formMessage.textContent = data.message;
+                    formMessage.className = 'form-message success';
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.message || 'Something went wrong');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                formMessage.textContent = error.message || 'Failed to send message. Please try again.';
+                formMessage.className = 'form-message error';
+            }
+        });
+    }
 }); 

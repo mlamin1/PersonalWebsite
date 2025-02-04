@@ -1997,16 +1997,23 @@ nav {
 }
 
 .form-message {
-    min-height: 20px;
-    font-size: 0.9em;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .form-message.success {
-    color: var(--accent-success);
+    background-color: #e6f4ea;
+    color: #1e7e34;
+    border: 1px solid #c3e6cb;
 }
 
 .form-message.error {
-    color: var(--accent-danger);
+    background-color: #fde8e8;
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
 }
 
 /* Back to Top Button */
