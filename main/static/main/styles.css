@@ -389,6 +389,9 @@ nav {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "web ml"
+        "mobile data";
     gap: 40px;
 }
 
@@ -398,6 +401,22 @@ nav {
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-item.web {
+    grid-area: web;
+}
+
+.expertise-item.ml {
+    grid-area: ml;
+}
+
+.expertise-item.mobile {
+    grid-area: mobile;
+}
+
+.expertise-item.data {
+    grid-area: data;
 }
 
 .expertise-item:hover {
