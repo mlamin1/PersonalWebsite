@@ -155,7 +155,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
+STATICFILES_DIRS = []  # Remove the duplicate static directory
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add these settings after the STATIC_ROOT configuration
@@ -188,7 +188,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Simplified static file serving
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'  # Changed from CompressedManifestStaticFilesStorage
 
 # HSTS settings
 SECURE_HSTS_SECONDS = 31536000  # 1 year
