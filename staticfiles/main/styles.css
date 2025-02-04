@@ -443,8 +443,9 @@ nav {
     height: 8px;
     background-color: var(--background-light);
     border-radius: 4px;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    margin-top: 25px;
 }
 
 .progress {
@@ -453,14 +454,18 @@ nav {
     border-radius: 4px;
     position: relative;
     transition: width 1s ease-in-out;
+    color: var(--text-primary);
+    font-size: 0.9em;
+    font-weight: 500;
 }
 
 .progress::after {
-    content: attr(style);
+    content: attr(data-progress);
     position: absolute;
     right: 0;
     top: -25px;
-    font-size: 0.8em;
+    transform: translateX(50%);
+    font-size: 0.9em;
     font-weight: 500;
     color: var(--text-primary);
 }
@@ -1535,7 +1540,8 @@ nav {
     border-right: 3px solid var(--primary-color);
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    width: 0;
+    animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
