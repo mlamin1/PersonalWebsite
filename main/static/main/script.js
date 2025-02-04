@@ -125,13 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
             
             try {
                 const formData = new FormData(contactForm);
+                const formDataObject = {};
+                formData.forEach((value, key) => {
+                    formDataObject[key] = value;
+                });
                 const response = await fetch(contactForm.action || '/contact/submit/', {
                     method: 'POST',
                     headers: {
+                        'Content-Type': 'application/json',
                         'X-Requested-With': 'XMLHttpRequest',
                         'X-CSRFToken': formData.get('csrfmiddlewaretoken')
                     },
-                    body: formData
+                    body: JSON.stringify(formDataObject)
                 });
                 
                 const data = await response.json();
