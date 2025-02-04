@@ -148,12 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMessage.textContent = data.message;
                     formMessage.className = 'form-message success';
                     contactForm.reset();
+                    
+                    // Clear success message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.textContent = '';
+                        formMessage.className = 'form-message';
+                    }, 5000);
                 } else {
-                    throw new Error(data.message || 'Something went wrong');
+                    formMessage.textContent = data.message || 'An error occurred. Please try again.';
+                    formMessage.className = 'form-message error';
                 }
             } catch (error) {
-                console.error('Form submission error:', error);
-                formMessage.textContent = error.message || 'Failed to send message. Please try again.';
+                console.error('Error:', error);
+                formMessage.textContent = 'An error occurred. Please try again.';
                 formMessage.className = 'form-message error';
             }
         });
