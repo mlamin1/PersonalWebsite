@@ -1,0 +1,81 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="contact-header section">
+    <div class="container">
+        <h1>Let's Connect</h1>
+        <p class="lead">Get in touch for opportunities or collaborations</p>
+    </div>
+</section>
+
+<section class="contact-content section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2>Send Me a Message</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="purpose">Purpose</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="">Select a purpose</option>
+                            <option value="job">Job Opportunity</option>
+                            <option value="project">Project Collaboration</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send Message</button>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Other Ways to Connect</h2>
+                
+                <div class="contact-email">
+                    <h3>Email</h3>
+                    <a href="mailto:munirulamin1996@gmail.com">munirulamin1996@gmail.com</a>
+                </div>
+                
+                <div class="social-connections">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/munirulamin" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/munirul-dev" target="_blank" class="social-link" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://twitter.com/munirul_dev" target="_blank" class="social-link" aria-label="X (Twitter) Profile">
+                            <i class="fab fa-x-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 
