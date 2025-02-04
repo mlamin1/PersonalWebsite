@@ -125,26 +125,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             try {
                 const formData = new FormData(contactForm);
-                const searchParams = new URLSearchParams();
-                
-                for (const [key, value] of formData) {
-                    searchParams.append(key, value);
-                }
-                
-                const response = await fetch('/contact/', {
+                const response = await fetch(contactForm.action || '/contact/', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
                         'X-Requested-With': 'XMLHttpRequest',
-                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                        'X-CSRFToken': formData.get('csrfmiddlewaretoken')
                     },
-                    body: searchParams.toString()
+                    body: formData
                 });
                 
                 const data = await response.json();
                 console.log('Response:', data);  // Debug log
                 
-                if (data.status === 'success') {
+                if (response.ok && data.status === 'success') {
                     formMessage.textContent = data.message;
                     formMessage.className = 'form-message success';
                     contactForm.reset();
