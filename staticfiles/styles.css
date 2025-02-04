@@ -1,4 +1,10 @@
 /* main/static/styles.css */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 :root {
     /* Primary Colors */
     --primary-color: #2A4365;      /* Dark blue for View My Work */
@@ -184,21 +190,18 @@ nav {
 /* Section 1 */
 
 .hero-header {
-    padding: 30px 50px;
-    max-width: 1200px;  /* Constrain max width */
-    margin: 0 auto;     /* Center the content */
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    padding: 30px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-container {
-    display: flex;
-    align-items: flex-start;  /* Changed from center to prevent vertical centering issues */
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 40px 20px;  /* Added more vertical padding */
+    padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 .hero-content {
@@ -379,13 +382,14 @@ nav {
 }
 
 .expertise-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    margin-top: 40px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .expertise-item {
@@ -474,7 +478,7 @@ nav {
 @media (max-width: 768px) {
     .expertise-grid {
         grid-template-columns: 1fr;
-        padding: 0 15px;
+        padding: 20px;
     }
     
     .expertise-item {
@@ -573,7 +577,7 @@ nav {
     
     .expertise-grid {
         grid-template-columns: 1fr;
-        padding: 10px;
+        padding: 20px;
     }
     
     .expertise-item {
@@ -606,10 +610,11 @@ nav {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .project-card {
@@ -1349,9 +1354,11 @@ nav {
 
 /* Container to keep content centered */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* About Page Styles */
@@ -1697,13 +1704,17 @@ nav {
 
 /* Featured Project Styles */
 .featured-project-card {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 40px;
+    box-sizing: border-box;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin-bottom: 60px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    padding: 40px;
 }
 
 .featured-project-card:hover {
