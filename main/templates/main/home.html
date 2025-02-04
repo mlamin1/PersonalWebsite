@@ -8,37 +8,39 @@
     <section class="hero-header section">
         <div class="hero-background"></div>
         <div class="container hero-container">
-            <div class="hero-content">
-                <h1>Hi, I'm Muniru Lamin</h1>
-                <h2 class="tagline" id="typing-text">Full Stack Developer | ServiceNow Developer | AWS Certified</h2>
-                <p>Experienced developer specializing in ServiceNow development, web applications, and enterprise solutions. Secret Clearance holder with proven expertise in building secure, scalable systems using Django, JavaScript, and cloud technologies.</p>
-                <div class="tech-badges">
-                    <span class="badge">Python</span>
-                    <span class="badge">Django</span>
-                    <span class="badge">JavaScript</span>
-                    <span class="badge">ServiceNow</span>
-                    <span class="badge">AWS</span>
+            <div class="hero-flex-container">
+                <div class="hero-content">
+                    <h1>Hi, I'm Muniru Lamin</h1>
+                    <h2 class="tagline" id="typing-text">Full Stack Developer | ServiceNow Developer | AWS Certified</h2>
+                    <p>Experienced developer specializing in ServiceNow development, web applications, and enterprise solutions. Secret Clearance holder with proven expertise in building secure, scalable systems using Django, JavaScript, and cloud technologies.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">Django</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">ServiceNow</span>
+                        <span class="badge">AWS</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="{% url 'projects' %}" class="btn">View My Work</a>
+                        <a href="{% static 'main/files/Muniru Lamin-Resume-v5.pdf' %}" class="btn-outline" target="_blank">Download Resume</a>
+                        <a href="{% url 'contact' %}" class="btn-secondary">Let's Connect</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/munirul-dev" target="_blank" class="social-link" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/munirulamin" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/munirul_dev" target="_blank" class="social-link" aria-label="X (Twitter) Profile">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="{% url 'projects' %}" class="btn">View My Work</a>
-                    <a href="{% static 'main/files/Muniru Lamin-Resume-v5.pdf' %}" class="btn-outline" target="_blank">Download Resume</a>
-                    <a href="{% url 'contact' %}" class="btn-secondary">Let's Connect</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/munirul-dev" target="_blank" class="social-link" aria-label="GitHub Profile">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/munirulamin" target="_blank" class="social-link" aria-label="LinkedIn Profile">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com/munirul_dev" target="_blank" class="social-link" aria-label="X (Twitter) Profile">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="placeholder-image hero">
-                    ML
+                <div class="hero-image">
+                    <div class="placeholder-image hero">
+                        ML
+                    </div>
                 </div>
             </div>
         </div>
