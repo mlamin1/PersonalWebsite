@@ -54,17 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Scroll Indicator
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', () => {
-            const expertiseSection = document.querySelector('.about-me');
-            if (expertiseSection) {
-                expertiseSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    }
-
     // Newsletter Form
     const newsletterForm = document.getElementById('newsletter-form');
     const formMessage = document.querySelector('.form-message');
