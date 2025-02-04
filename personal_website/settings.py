@@ -155,7 +155,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = []  # Remove the duplicate static directory
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static/main')]  # Point directly to the main static directory
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Add these settings after the STATIC_ROOT configuration
